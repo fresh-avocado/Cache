@@ -32,6 +32,8 @@ int main() {
 
     cout << lruCache.getValueFromKey("a").value_or(INT_MIN) << endl; // 5
 
+    cout << lruCache.getMostRecentKey().value_or("No recent key") << endl; // a
+
 
 ////    Probando la implementacion de la lista enlazada
 //    ListaEnlazada<string, int> listaEnlazada;

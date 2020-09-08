@@ -12,6 +12,10 @@
 
 namespace CACHE {
 
+    using namespace LINKEDLIST;
+
+    typedef unsigned MaxSizeType;
+
     enum ReplacementPolicy {
         LRU,
         FIFO
@@ -26,11 +30,11 @@ namespace CACHE {
 
     template<typename U, typename T>
     class CacheMejorado<LRU, U, T> {
-        int maxSize;
+        MaxSizeType maxSize;
         unordered_map<U, Node<U, T> *> cache;
         ListaEnlazada<U, T> *keyValuePairs;
     public:
-        explicit CacheMejorado(int n) : maxSize{n} {
+        explicit CacheMejorado(MaxSizeType n) : maxSize{n} {
             cache = {};
             keyValuePairs = new ListaEnlazada<U, T>();
         }
@@ -81,11 +85,11 @@ namespace CACHE {
 
     template<typename U, typename T>
     class CacheMejorado<FIFO, U, T> {
-        int maxSize;
+        MaxSizeType maxSize;
         unordered_map<U, Node<U, T> *> cache;
         ListaEnlazada<U, T> *keyValuePairs;
     public:
-        explicit CacheMejorado(int n) : maxSize{n} {
+        explicit CacheMejorado(MaxSizeType n) : maxSize{n} {
             cache = {};
             keyValuePairs = new ListaEnlazada<U, T>();
         }
