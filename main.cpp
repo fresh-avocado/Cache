@@ -1,11 +1,13 @@
 #include "CacheMejorado.h"
 
 using namespace std;
+// using namespace CACHE;
 
 int main() {
 
-//  CacheMejorado<FIFO, string, int> lruCache(3);
-    CacheMejorado<LRU, string, int> lruCache(3); // int porque nuestro cache tendra keys de tipo string, guardara int's como values y usara el policy de LRU
+//  CACHE::CacheMejorado<CACHE::FIFO, string, int> lruCache(3);
+    // int porque nuestro cache tendra keys de tipo string, guardara int's como values y usara el policy de LRU:
+    CACHE::CacheMejorado<CACHE::LRU, string, int> lruCache(3);
 
     cout << lruCache.getMostRecentKey().value_or("No recent key") << endl; //
 
