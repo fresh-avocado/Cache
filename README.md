@@ -1,5 +1,5 @@
 ## Gabriel Spranger Rojas - 201710406
-**Compilar:** g++ -std=c++17 main.cpp
+**Compilar:** `g++ -std=c++17 main.cpp`
 
 ## Análisis
 
